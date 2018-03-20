@@ -1,0 +1,19 @@
+<div class="col-xs-12 col-md-12 no-padding">
+    <div class="col-xs-12 col-md-12 no-padding text-center vert-offset-top-2">
+        <h3>Login</h3>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2 no-padding vert-offset-top-3">
+        <form novalidate name="loginForm">
+            <div class="col-xs-12 col-md-12 no-padding">
+                <input ng-model="username" type="text" class="input-lg form-control" placeholder="username" required>
+            </div>
+            <div class="col-xs-12 col-md-12 no-padding vert-offset-top-half">
+                <my-password ng-model="password"></my-password>
+            </div>
+
+            <div class="col-xs-4 col-xs-offset-4 col-md-4 col-md-offset-4 no-padding vert-offset-top-1" ng-show="loginForm.$valid">
+                <a href value="login" class="btn btn-lg btn-danger btn-block" ng-click="login()">login</a>
+            </div>
+        </form>
+    </div>
+</div>
