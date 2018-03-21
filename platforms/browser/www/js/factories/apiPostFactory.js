@@ -1,19 +1,16 @@
-myApp.factory('ApiPostFactory', function($http, $q)
-{
+myApp.factory('ApiPostFactory', function($http, $q){
+    
     var qObj = null;
 
-    return function(url, data)
-    {
+    return function(url, data){
         qObj = $q.defer();
 
-        $http(
-            {
+        $http({
                 method  : 'POST',
                 url     : url,
                 data    : data,
                 timeout : timeoutTime,
-            }
-        ).then(
+            }).then(
             function(result){
                 qObj.resolve({error: false, data: result.data})
             },

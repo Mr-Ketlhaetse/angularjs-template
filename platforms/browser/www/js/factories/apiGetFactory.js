@@ -1,17 +1,13 @@
-myApp.factory('ApiGetFactory', function($http, $q)
-{
+myApp.factory('ApiGetFactory', function($http, $q){
     var qObj = null;
 
-    return function(Url)
-    {
+    return function(Url){
         qObj = $q.defer();
 
-        $http(
-            {
+        $http({
                 method: 'GET',
                 url: url
-            }
-        ).then(
+            }).then(
             function(result){
                 qObj.resolve({error: false, data: result.data})
             },

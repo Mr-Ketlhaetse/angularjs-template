@@ -1,5 +1,4 @@
-myApp.controller('IndexController', function($scope, $location, $timeout, ModalFactory,ModalService)
-{
+myApp.controller('IndexController', function($scope, $location, $timeout, ModalFactory,ModalService){
     $scope.showModal = false;
 
 

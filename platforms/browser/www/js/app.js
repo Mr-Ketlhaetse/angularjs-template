@@ -12,35 +12,17 @@ function toRad(val) {
 var myApp = angular.module('myApp',['ngRoute','angular-notification-icons', 'ngAnimate', 'ui.select','ngSanitize']);
 
 
-myApp.config(function($routeProvider)
-{
+myApp.config(function($routeProvider){
     $routeProvider.
     when(
         '/',
         {
-            templateUrl : 'html/views/home.html',
-            controller  : 'HomeController'
-        }
-    ).
-        when(
-        '/store/select',
-        {
-            templateUrl : 'html/views/storeSelect.html',
-            controller  : 'StoreSelectController'
-        }
-    ).
-        when(
-        '/questionnaire',
-        {
-            templateUrl : 'html/views/questionnaire.html',
-            controller  : 'QuestionnaireController'
-        }
-    ).
-        //when('/',{templateUrl:'html/views/', controller:''}).
+            templateUrl : 'html/views/login.html',
+            controller  : 'LoginController'
+        }).       
         otherwise(
         {
             redirectTo  : 'html/views/home.html',
             controller  : 'HomeController'
-        }
-    );
+        });
 });
